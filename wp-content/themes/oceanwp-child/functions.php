@@ -1449,7 +1449,7 @@ function basati_render_control_page(): void {
 
                             ?>
 
-                                <input type="checkbox" class="bc-slot-check" data-index="<?php echo (int) $i; ?>" <?php checked( $on ); ?> title="Manual (teléfono)">
+                                <input type="checkbox" class="bc-slot-check bc-slot-check-man" data-index="<?php echo (int) $i; ?>" <?php checked( $on ); ?> title="Manual (teléfono)">
 
                             <?php endforeach; ?>
 
@@ -1561,7 +1561,7 @@ function basati_render_control_page(): void {
             });
             d.manual_checks.forEach(function(on, i) {
                 if (pos > 0 && pos % 5 === 0) html += '<span class="bc-check-sep"></span>';
-                html += '<input type="checkbox" class="bc-slot-check" data-index="' + i + '"' + (on ? ' checked' : '') + ' title="Manual (teléfono)">';
+                html += '<input type="checkbox" class="bc-slot-check bc-slot-check-man" data-index="' + i + '"' + (on ? ' checked' : '') + ' title="Manual (teléfono)">';
                 pos++;
             });
             return html;

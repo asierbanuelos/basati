@@ -355,6 +355,7 @@ Updated: 2025-12-10 07:04:17
 /* ─── Checkboxes de slots por comanda ───────────────────────────────────────── */
 
 .bc-slot-check-web { accent-color: #e67e22 !important; cursor: not-allowed !important; }
+.bc-slot-check-man { accent-color: #27ae60 !important; cursor: pointer !important; }
 .bc-slot-order-group { display: inline-flex; align-items: center; gap: 2px; margin-right: 3px; }
 .bc-order-link {
     font-size: .62rem;

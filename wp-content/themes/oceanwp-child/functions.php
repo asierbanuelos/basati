@@ -4523,6 +4523,307 @@ function basati_menu_categoria( $atts ) {
 
         </div>
 
+
+    <div style="background:#fff;border:1px solid #ddd;border-radius:8px;margin-top:1.5rem;overflow:hidden">
+
+        <div style="padding:1rem 1.5rem;border-bottom:1px solid #eee;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.6rem">
+
+            <h2 style="margin:0;font-size:1.05rem">Historial de Pedidos por Franja</h2>
+
+            <div style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap">
+
+                <select id="bc-hist-days" style="padding:.3rem .5rem;border:1px solid #ddd;border-radius:4px;font-size:.85rem">
+
+                    <option value="7">Ultimos 7 dias</option>
+
+                    <option value="14">Ultimos 14 dias</option>
+
+                    <option value="30" selected>Ultimos 30 dias</option>
+
+                    <option value="60">Ultimos 60 dias</option>
+
+                    <option value="90">Ultimos 90 dias</option>
+
+                </select>
+
+                <select id="bc-hist-type" style="padding:.3rem .5rem;border:1px solid #ddd;border-radius:4px;font-size:.85rem">
+
+                    <option value="">Todos</option>
+
+                    <option value="delivery">Domicilio</option>
+
+                    <option value="pickup">Recoger</option>
+
+                </select>
+
+                <button type="button" id="bc-load-hist" class="button button-primary" style="font-size:.82rem">Cargar historial</button>
+
+                <button type="button" id="bc-export-hist" class="button" style="font-size:.82rem;display:none">Exportar CSV</button>
+
+            </div>
+
+        </div>
+
+        <div id="bc-hist-wrap" style="padding:1rem 1.5rem;color:#aaa;font-size:.88rem">
+
+            Selecciona el periodo y pulsa <strong>Cargar historial</strong>.
+
+        </div>
+
+    </div>
+
+    <style>
+
+    .bc-hist-table{border-collapse:collapse;width:100%;font-size:.85rem}
+
+    .bc-hist-table th{background:#f8f8f8;padding:.5rem .8rem;text-align:left;font-size:.78rem;color:#666;border-bottom:2px solid #eee;white-space:nowrap;cursor:pointer}
+
+    .bc-hist-table th.bc-sortable:hover{background:#eef}
+
+    .bc-hist-table td{padding:.45rem .8rem;border-bottom:1px solid #f5f5f5;vertical-align:middle}
+
+    .bc-hist-table tr:hover td{background:#fafafa}
+
+    .bc-hist-badge{font-size:.72rem;font-weight:700;padding:2px 7px;border-radius:3px;white-space:nowrap}
+
+    .bc-hist-badge-del{background:#fde8d8;color:#c0392b}
+
+    .bc-hist-badge-pck{background:#ddeeff;color:#2980b9}
+
+    .bc-hist-summary{display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;font-size:.85rem}
+
+    .bc-hist-stat{background:#f8f8f8;border-radius:6px;padding:.5rem 1rem;border:1px solid #eee}
+
+    .bc-hist-stat strong{display:block;font-size:1.2rem;color:#c0392b}
+
+    </style>
+
+    <script>
+
+    (function($){
+
+        var histData = [];
+
+        var sortCol = 'date_sort', sortAsc = false;
+
+        $('#bc-load-hist').on('click', function() {
+
+            var days = $('#bc-hist-days').val();
+
+            var type = $('#bc-hist-type').val();
+
+            var $btn = $(this).prop('disabled', true).text('Cargando...');
+
+            $('#bc-hist-wrap').html('<p style="color:#888;padding:.5rem">Consultando pedidos...</p>');
+
+            $('#bc-export-hist').hide();
+
+            $.post(ajaxurl, {
+
+                action:     'basati_historial',
+
+                nonce:      '<?php echo esc_js( wp_create_nonce( "basati_manual_slot_nonce" ) ); ?>',
+
+                days:       days,
+
+                order_type: type
+
+            }, function(res) {
+
+                $btn.prop('disabled', false).text('Cargar historial');
+
+                if (!res.success) { $('#bc-hist-wrap').html('<p style="color:#e74c3c">Error al cargar datos.</p>'); return; }
+
+                histData = res.data.rows;
+
+                sortCol = 'date_sort'; sortAsc = false;
+
+                renderHistorial(histData);
+
+                if (histData.length) $('#bc-export-hist').show();
+
+            }).fail(function(){
+
+                $btn.prop('disabled', false).text('Cargar historial');
+
+                $('#bc-hist-wrap').html('<p style="color:#e74c3c">Error de conexion.</p>');
+
+            });
+
+        });
+
+        function sortedRows(col, asc) {
+
+            return histData.slice().sort(function(a,b){
+
+                var va = a[col] !== undefined ? a[col] : '';
+
+                var vb = b[col] !== undefined ? b[col] : '';
+
+                if (col === 'pizzas' || col === 'id') { va = +va; vb = +vb; }
+
+                if (va < vb) return asc ? -1 : 1;
+
+                if (va > vb) return asc ? 1 : -1;
+
+                return 0;
+
+            });
+
+        }
+
+        function renderHistorial(rows) {
+
+            if (!rows.length) {
+
+                $('#bc-hist-wrap').html('<p style="color:#888;padding:.5rem">No hay pedidos en este periodo.</p>');
+
+                return;
+
+            }
+
+            var totalPizzas = 0, byDay = {}, bySlot = {};
+
+            rows.forEach(function(r) {
+
+                totalPizzas += +r.pizzas;
+
+                byDay[r.date_sort]  = (byDay[r.date_sort]  || 0) + 1;
+
+                bySlot[r.slot]      = (bySlot[r.slot]      || 0) + (+r.pizzas);
+
+            });
+
+            var topSlot = Object.keys(bySlot).sort(function(a,b){ return bySlot[b]-bySlot[a]; })[0] || '-';
+
+            var topDay  = Object.keys(byDay).sort(function(a,b){  return byDay[b]-byDay[a];   })[0] || '';
+
+            if (topDay) topDay = topDay.split('-').reverse().join('/');
+
+            var stats = '<div class="bc-hist-summary">'
+
+                + '<div class="bc-hist-stat"><strong>' + rows.length + '</strong>Pedidos</div>'
+
+                + '<div class="bc-hist-stat"><strong>' + totalPizzas + '</strong>Pizzas</div>'
+
+                + '<div class="bc-hist-stat"><strong>' + topSlot + '</strong>Franja mas activa</div>'
+
+                + (topDay ? '<div class="bc-hist-stat"><strong>' + topDay + '</strong>Dia mas activo</div>' : '')
+
+                + '</div>';
+
+            var cols = [
+
+                {k:'date_sort', label:'Fecha'},
+
+                {k:'slot',      label:'Franja'},
+
+                {k:'type',      label:'Tipo'},
+
+                {k:'id',        label:'Comanda'},
+
+                {k:'pizzas',    label:'Pizzas'},
+
+                {k:'status',    label:'Estado'},
+
+                {k:'customer',  label:'Cliente'},
+
+                {k:'items',     label:'Articulos'},
+
+                {k:'total',     label:'Total'}
+
+            ];
+
+            var thead = '<tr>';
+
+            cols.forEach(function(c){
+
+                var arrow = c.k === sortCol ? (sortAsc ? ' &#8593;' : ' &#8595;') : '';
+
+                thead += '<th class="bc-sortable" data-col="' + c.k + '">' + c.label + arrow + '</th>';
+
+            });
+
+            thead += '</tr>';
+
+            var tbody = '';
+
+            rows.forEach(function(r) {
+
+                var badge = r.type === 'delivery'
+
+                    ? '<span class="bc-hist-badge bc-hist-badge-del">Domicilio</span>'
+
+                    : '<span class="bc-hist-badge bc-hist-badge-pck">Recoger</span>';
+
+                tbody += '<tr>'
+
+                    + '<td>' + r.date + '</td>'
+
+                    + '<td><strong>' + r.slot + '</strong></td>'
+
+                    + '<td>' + badge + '</td>'
+
+                    + '<td><a href="' + r.url + '" target="_blank" style="color:#c0392b;font-weight:700">#' + r.id + '</a></td>'
+
+                    + '<td style="text-align:center;font-weight:' + (+r.pizzas > 0 ? '700' : '400') + ';color:' + (+r.pizzas > 0 ? '#c0392b' : '#aaa') + '">' + (r.pizzas || '-') + '</td>'
+
+                    + '<td style="font-size:.78rem;color:#888">' + r.status + '</td>'
+
+                    + '<td style="font-size:.82rem">' + (r.customer || '-') + '</td>'
+
+                    + '<td style="font-size:.75rem;color:#666;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="' + r.items.replace(/"/g,"'") + '">' + r.items + '</td>'
+
+                    + '<td style="font-weight:600">' + r.total + '</td>'
+
+                    + '</tr>';
+
+            });
+
+            $('#bc-hist-wrap').html(stats + '<div style="overflow-x:auto"><table class="bc-hist-table"><thead>' + thead + '</thead><tbody>' + tbody + '</tbody></table></div>');
+
+            $('#bc-hist-wrap .bc-sortable').on('click', function(){
+
+                var col = $(this).data('col');
+
+                if (col === sortCol) { sortAsc = !sortAsc; } else { sortCol = col; sortAsc = true; }
+
+                renderHistorial(sortedRows(sortCol, sortAsc));
+
+            });
+
+        }
+
+        $('#bc-export-hist').on('click', function() {
+
+            if (!histData.length) return;
+
+            var keys = ['date','slot','type','id','pizzas','status','customer','items','total'];
+
+            var hdrs = ['Fecha','Franja','Tipo','Comanda','Pizzas','Estado','Cliente','Articulos','Total'];
+
+            var csv  = hdrs.join(';') + '\n';
+
+            histData.forEach(function(r) {
+
+                csv += keys.map(function(k){ return '"' + String(r[k]||'').replace(/"/g,"'").replace(/;/g,',') + '"'; }).join(';') + '\n';
+
+            });
+
+            var a = document.createElement('a');
+
+            a.href = URL.createObjectURL(new Blob(['\uFEFF'+csv],{type:'text/csv;charset=utf-8'}));
+
+            a.download = 'basati-historial.csv';
+
+            a.click();
+
+        });
+
+    })(jQuery);
+
+    </script>
+
     </div>
 
 
@@ -4532,6 +4833,105 @@ function basati_menu_categoria( $atts ) {
 }
 
 add_shortcode( 'menu_categoria', 'basati_menu_categoria' );
+
+// ─── HISTORIAL DE PEDIDOS POR FRANJA ─────────────────────────────────────────
+
+add_action( 'wp_ajax_basati_historial', function() {
+
+    if ( ! current_user_can( 'manage_woocommerce' ) ) { wp_send_json_error( 'Forbidden' ); return; }
+
+    check_ajax_referer( 'basati_manual_slot_nonce', 'nonce' );
+
+    $days  = min( 90, max( 1, intval( $_POST['days'] ?? 30 ) ) );
+
+    $type  = sanitize_text_field( $_POST['order_type'] ?? '' );
+
+    $start = strtotime( "-{$days} days midnight" );
+
+    $args = [
+
+        'status'       => [ 'pending', 'processing', 'on-hold', 'completed', 'wc-completed' ],
+
+        'limit'        => -1,
+
+        'date_created' => '>' . $start,
+
+        'orderby'      => 'date',
+
+        'order'        => 'DESC',
+
+        'meta_query'   => [ [ 'key' => '_basati_slot', 'compare' => 'EXISTS' ] ],
+
+    ];
+
+    if ( $type ) {
+
+        $args['meta_query'][] = [ 'key' => '_basati_order_type', 'value' => $type ];
+
+    }
+
+    $orders = wc_get_orders( $args );
+
+    $rows   = [];
+
+    foreach ( $orders as $order ) {
+
+        $slot  = $order->get_meta( '_basati_slot' );
+
+        $otype = $order->get_meta( '_basati_order_type' );
+
+        if ( ! $slot ) continue;
+
+        $pizza_qty = 0;
+
+        $items_str = [];
+
+        foreach ( $order->get_items() as $item ) {
+
+            $terms  = wp_get_post_terms( $item['product_id'], 'product_cat', [ 'fields' => 'slugs' ] );
+
+            $is_piz = ! empty( array_intersect( basati_pizza_cats(), is_array( $terms ) ? $terms : [] ) );
+
+            if ( $is_piz ) $pizza_qty += (int) $item->get_quantity();
+
+            $items_str[] = $item->get_name() . ' x' . $item->get_quantity();
+
+        }
+
+        $date_obj = $order->get_date_created();
+
+        $rows[] = [
+
+            'id'        => $order->get_id(),
+
+            'date'      => $date_obj ? $date_obj->date( 'd/m/Y' ) : '&#8212;',
+
+            'date_sort' => $date_obj ? $date_obj->date( 'Y-m-d' ) : '',
+
+            'slot'      => $slot,
+
+            'type'      => $otype,
+
+            'pizzas'    => $pizza_qty,
+
+            'total'     => strip_tags( wc_price( $order->get_total() ) ),
+
+            'status'    => wc_get_order_status_name( $order->get_status() ),
+
+            'items'     => implode( ', ', $items_str ),
+
+            'customer'  => trim( $order->get_billing_first_name() . ' ' . $order->get_billing_last_name() ),
+
+            'url'       => esc_url( admin_url( 'admin.php?page=wc-orders&action=edit&id=' . $order->get_id() ) ),
+
+        ];
+
+    }
+
+    wp_send_json_success( [ 'rows' => $rows, 'total' => count( $rows ) ] );
+
+} );
+
 
 // ─── DESCRIPCIÓN CORTA DEL PRODUCTO EN EL LISTADO ────────────────────────────
 add_action( 'ocean_after_archive_product_title', function() {

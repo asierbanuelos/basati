@@ -1,0 +1,8 @@
+wp-content/uploads/
+wp-content/cache/
+wp-content/updraft/
+wp-content/plugins/all-in-one-wp-migration-unlimited-main/storage/
+wp-content/wflogs/
+*.log
+.htaccess
+local-xdebuginfo.php

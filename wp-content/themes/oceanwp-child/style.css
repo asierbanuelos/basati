@@ -1,0 +1,353 @@
+/*
+Theme Name: OceanWP Child
+Theme URI: https://oceanwp.org/
+Template: oceanwp
+Author: OceanWP
+Author URI: https://oceanwp.org/about-oceanwp/
+Description: OceanWP is the perfect theme for your project. Lightweight and highly extendable, it will enable you to create almost any type of website such a blog, portfolio, business website and WooCommerce storefront with a beautiful &amp; professional design. Very fast, responsive, RTL &amp; translation ready, best SEO practices, unique WooCommerce features to increase conversion and much more. You can even edit the settings on tablet &amp; mobile so your site looks good on every device. Work with the most popular page builders as Elementor, Beaver Builder, Brizy, Visual Composer, Divi, SiteOrigin, etc... Developers will love his extensible codebase making it a joy to customize and extend. Best friend of Elementor &amp; WooCommerce. Looking for a Multi-Purpose theme? Look no further! Check the demos to realize that it's the only theme you will ever need: https://oceanwp.org/demos/
+Tags: two-columns,right-sidebar,footer-widgets,blog,news,custom-background,custom-menu,post-formats,rtl-language-support,sticky-post,editor-style,threaded-comments,translation-ready,buddypress,custom-colors,featured-images,full-width-template,theme-options,e-commerce,block-styles,wide-blocks,accessibility-ready
+Version: 4.1.4.1765350257
+Updated: 2025-12-10 07:04:17
+
+*/
+
+/* ─── Botón [basati_carrito] ────────────────────────────────────────────────── */
+
+.basati-cart-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #c0392b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background .2s, transform .1s;
+    padding: 0;
+    line-height: 1;
+}
+
+.basati-cart-btn:hover { background: #a93226; transform: scale(1.1); }
+.basati-cart-btn.loading { opacity: .6; pointer-events: none; }
+
+/* ─── Shortcode [revo_modificadores] ────────────────────────────────────────── */
+
+.basati-mod-shortcode { margin-top: 1rem; }
+
+.basati-mod-shortcode .basati-mod-group { margin-bottom: 1rem; }
+
+.basati-mod-shortcode .basati-mod-group-title {
+    font-size: .8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+    letter-spacing: .5px;
+    margin-bottom: .5rem;
+}
+
+.basati-mod-shortcode .basati-mod-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .3rem .8rem;
+}
+
+.basati-mod-shortcode .basati-mod-item {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    font-size: .85rem;
+    cursor: pointer;
+    min-width: 0;
+}
+
+.basati-mod-shortcode .basati-mod-item input { accent-color: #c0392b; cursor: pointer; }
+
+.basati-mod-shortcode .basati-mod-name {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.basati-mod-shortcode .basati-mod-price {
+    color: #c0392b;
+    font-weight: 600;
+    font-size: .8rem;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.basati-mod-shortcode .basati-mod-sc-total {
+    min-height: 1.2em;
+    margin-top: .35rem;
+    color: #c0392b;
+    font-size: .9rem;
+    font-weight: 700;
+    text-align: right;
+}
+
+/* ─── Modal de modificadores ────────────────────────────────────────────────── */
+
+#basati-modifier-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+}
+
+.basati-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.55);
+}
+
+.basati-modal-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 12px;
+    width: min(560px, 95vw);
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,.2);
+}
+
+.basati-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #666;
+    line-height: 1;
+    padding: 0;
+}
+
+.basati-modal-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 1.2rem 1.5rem 0.8rem;
+    border-bottom: 1px solid #eee;
+    margin: 0;
+    color: #c0392b;
+}
+
+.basati-modal-body {
+    overflow-y: auto;
+    padding: 1rem 1.5rem;
+    flex: 1;
+}
+
+.basati-mod-group { margin-bottom: 1.2rem; }
+
+.basati-mod-group-title {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.basati-mod-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem 1rem;
+}
+
+.basati-mod-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.88rem;
+    cursor: pointer;
+}
+
+.basati-mod-item input { cursor: pointer; accent-color: #c0392b; }
+
+.basati-mod-price {
+    color: #c0392b;
+    font-weight: 600;
+    font-size: 0.82rem;
+}
+
+.basati-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #eee;
+    background: #fafafa;
+}
+
+.basati-modal-total {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+.basati-modal-confirm {
+    background: #c0392b !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 0.6rem 1.6rem !important;
+    font-weight: 600 !important;
+    cursor: pointer;
+}
+
+.basati-modal-confirm:hover { background: #a93226 !important; }
+
+/* ─── Menú por categoría ────────────────────────────────────────────────────── */
+
+.basati-menu-seccion {
+    margin-bottom: 3rem;
+}
+
+.basati-menu-titulo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #c0392b;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.basati-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem 2rem;
+}
+
+@media (max-width: 900px) {
+    .basati-menu-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 580px) {
+    .basati-menu-grid { grid-template-columns: 1fr; }
+}
+
+.basati-menu-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.basati-menu-item-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.3rem;
+}
+
+.basati-menu-item-nombre {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    color: #222;
+}
+
+.basati-menu-item-puntos {
+    flex: 1;
+    border-bottom: 2px dotted #aaa;
+    margin: 0 0.4rem 3px;
+}
+
+.basati-menu-item-precio {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #c0392b;
+    white-space: nowrap;
+}
+
+.basati-menu-item-precio .woocommerce-Price-amount {
+    color: #c0392b;
+}
+
+.basati-menu-item-desc {
+    font-size: 0.82rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.basati-menu-item-actions .add_to_cart_button,
+.basati-menu-item-actions .single_add_to_cart_button {
+    background: transparent;
+    border: 2px solid #c0392b;
+    color: #c0392b;
+    border-radius: 50px;
+    padding: 4px 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 0.4rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.basati-menu-item-actions .add_to_cart_button:hover {
+    background: #c0392b;
+    color: #fff;
+}
+
+.basati-size-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.basati-size-toggle {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.basati-size-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: transparent;
+    border: 1.5px solid #c0392b;
+    color: #c0392b;
+    border-radius: 50px;
+    padding: 2px 12px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.basati-size-btn.active,
+.basati-size-btn:hover {
+    background: #c0392b;
+    color: #fff;
+}
+
+.basati-size-btn-price {
+    font-weight: 700;
+}
+
+.basati-size-btn-price .woocommerce-Price-amount {
+    color: inherit;
+}
+
+/* ─── Descripción corta en listado de productos ─────────────────────────────── */
+
+.woo-entry-inner li.basati-loop-desc {
+    font-size: 0.82rem;
+    color: #555;
+    line-height: 1.4;
+    margin: 0 0 6px;
+    list-style: none;
+    padding: 0;
+}

@@ -1,0 +1,537 @@
+# Copyright (C) 2021 WPClever
+# This file is distributed under the same license as the WPC Fly Cart for WooCommerce plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WPC Fly Cart for WooCommerce 4.1.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woo-fly-cart\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-09-11T08:55:26+00:00\n"
+"PO-Revision-Date: 2021-09-14 20:45+0200\n"
+"X-Generator: Poedit 3.0\n"
+"X-Domain: woo-fly-cart\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: hu_HU\n"
+
+#. Plugin Name of the plugin
+msgid "WPC Fly Cart for WooCommerce"
+msgstr "Mini bevásárlókosár WooCommerce-hez"
+
+#. Plugin URI of the plugin
+msgid "https://wpclever.net/"
+msgstr "https://wpclever.net/"
+
+#. Description of the plugin
+msgid "WooCommerce interaction mini cart with many styles and effects."
+msgstr "WooCommerce mini bevásárlókosár stílusokkal és effektekkel."
+
+#. Author of the plugin
+msgid "WPClever"
+msgstr "WPClever"
+
+#. Author URI of the plugin
+msgid "https://wpclever.net"
+msgstr "https://wpclever.net"
+
+#: wpc-fly-cart.php:142 wpc-fly-cart.php:942
+msgid "Undo?"
+msgstr "Visszavonás?"
+
+#: wpc-fly-cart.php:143 wpc-fly-cart.php:951
+msgid "%s was removed."
+msgstr "%s eltávolítva."
+
+#: wpc-fly-cart.php:174 wpc-fly-cart.php:229
+msgid "Settings"
+msgstr "Beállítások"
+
+#: wpc-fly-cart.php:175 wpc-fly-cart.php:238
+msgid "Premium Version"
+msgstr "Prémium verzió"
+
+#: wpc-fly-cart.php:191
+msgid "Support"
+msgstr "Támogatás"
+
+#: wpc-fly-cart.php:201 wpc-fly-cart.php:212
+msgid "WPC Fly Cart"
+msgstr "WPC Fly Cart"
+
+#: wpc-fly-cart.php:201
+msgid "Fly Cart"
+msgstr "Fly Cart"
+
+#: wpc-fly-cart.php:215
+msgid ""
+"Thank you for using our plugin! If you are satisfied, please reward it a "
+"full five-star %s rating."
+msgstr ""
+"Köszönjük, hogy a bővítményünket használja! Amennyiben elégedett, kérem "
+"értékelje %s csillaggal."
+
+#: wpc-fly-cart.php:218
+msgid "Reviews"
+msgstr "Értékelések"
+
+#: wpc-fly-cart.php:220
+msgid "Changelog"
+msgstr "Változások"
+
+#: wpc-fly-cart.php:222
+msgid "Discussion"
+msgstr "Egyeztetések"
+
+#: wpc-fly-cart.php:233 wpc-fly-cart.php:904
+msgid "Localization"
+msgstr "Lokalizáció"
+
+#: wpc-fly-cart.php:242
+msgid "Essential Kit"
+msgstr "Alap csomagok"
+
+#: wpc-fly-cart.php:252
+msgid "General"
+msgstr "Általános"
+
+#: wpc-fly-cart.php:253
+msgid "General settings for the fly cart."
+msgstr "Általános beállítások a mini bevásárlókosárhoz."
+
+#: wpc-fly-cart.php:256
+msgid "Open on AJAX add to cart"
+msgstr "Megnyíljon a \"Kosárba teszem\" (AJAX) megnyomásakor"
+
+#: wpc-fly-cart.php:261 wpc-fly-cart.php:279 wpc-fly-cart.php:308
+#: wpc-fly-cart.php:341 wpc-fly-cart.php:386 wpc-fly-cart.php:738
+#: wpc-fly-cart.php:756 wpc-fly-cart.php:774 wpc-fly-cart.php:796
+#: wpc-fly-cart.php:852
+msgid "Yes"
+msgstr "Igen"
+
+#: wpc-fly-cart.php:265 wpc-fly-cart.php:283 wpc-fly-cart.php:312
+#: wpc-fly-cart.php:345 wpc-fly-cart.php:390 wpc-fly-cart.php:486
+#: wpc-fly-cart.php:742 wpc-fly-cart.php:760 wpc-fly-cart.php:778
+#: wpc-fly-cart.php:800 wpc-fly-cart.php:856
+msgid "No"
+msgstr "Nem"
+
+#: wpc-fly-cart.php:269
+msgid ""
+"The fly cart will be opened immediately after whenever click to AJAX Add to "
+"cart buttons? See %s \"Add to cart behaviour\" setting %s"
+msgstr ""
+"A mini bevásárlókosár azonnal megnyíljon, miután rákattint a \"Kosárba teszem"
+"\" gombra (AJAX-os)? Lásd a %s \"A kosárba tétel működése\" beállítást %s"
+
+#: wpc-fly-cart.php:274
+msgid "Open on normal add to cart"
+msgstr "Megnyíljon a \"Kosárba teszem\" (normál) megnyomásakor"
+
+#: wpc-fly-cart.php:287
+msgid ""
+"The fly cart will be opened immediately after whenever click to normal Add "
+"to cart buttons (AJAX is not enable) or Add to cart button in single product "
+"page?"
+msgstr ""
+"A mini bevásárlókosár azonnal megnyíljon, miután rákattint a \"Kosárba teszem"
+"\" gombra (AJAX nincs engedélyezve) vagy a \"Kosárba teszem\" gombra a "
+"termék oldal esetében?"
+
+#: wpc-fly-cart.php:292
+msgid "Manual show up button"
+msgstr "Kézi megjelenítési gomb"
+
+#: wpc-fly-cart.php:296
+msgid "button class or id"
+msgstr "gomb osztály vagy id"
+
+#: wpc-fly-cart.php:298
+msgid ""
+"The class or id of the button, when click to this button the fly cart will "
+"be show up. Example %s or %s"
+msgstr ""
+"A gomb osztálya vagy azonosítója, amikor erre a gombra kattint, megjelenik a "
+"mini bevásárlókosár. Például %s vagy %s"
+
+#: wpc-fly-cart.php:303
+msgid "Reverse items"
+msgstr "Tételek megfordítása"
+
+#: wpc-fly-cart.php:318
+msgid "Overlay layer"
+msgstr "Takaró réteg"
+
+#: wpc-fly-cart.php:323 wpc-fly-cart.php:458 wpc-fly-cart.php:521
+#: wpc-fly-cart.php:539 wpc-fly-cart.php:554 wpc-fly-cart.php:570
+#: wpc-fly-cart.php:586 wpc-fly-cart.php:602 wpc-fly-cart.php:620
+#: wpc-fly-cart.php:658 wpc-fly-cart.php:674 wpc-fly-cart.php:692
+#: wpc-fly-cart.php:710
+msgid "Show"
+msgstr "Mutat"
+
+#: wpc-fly-cart.php:327 wpc-fly-cart.php:462 wpc-fly-cart.php:499
+#: wpc-fly-cart.php:525 wpc-fly-cart.php:543 wpc-fly-cart.php:558
+#: wpc-fly-cart.php:574 wpc-fly-cart.php:590 wpc-fly-cart.php:606
+#: wpc-fly-cart.php:624 wpc-fly-cart.php:647 wpc-fly-cart.php:662
+#: wpc-fly-cart.php:678 wpc-fly-cart.php:696 wpc-fly-cart.php:714
+msgid "Hide"
+msgstr "Elrejt"
+
+#: wpc-fly-cart.php:331
+msgid ""
+"If you hide the overlay layer, the buyer still can work on your site when "
+"the fly cart is opening."
+msgstr ""
+"Amennyiben elrejted a takaró réteget, a vevő zavartalanul böngészhet a "
+"webhelyen, amikor a mini bevásárlókosár kinyílik."
+
+#: wpc-fly-cart.php:336
+msgid "Use perfect-scrollbar"
+msgstr "Tökéletes görgetősáv használata"
+
+#: wpc-fly-cart.php:349
+msgid "Read more about %s"
+msgstr "Tudj meg többet erről %s"
+
+#: wpc-fly-cart.php:354 wpc-fly-cart.php:806
+msgid "Position"
+msgstr "Pozíció"
+
+#: wpc-fly-cart.php:359
+msgid "Right"
+msgstr "Jobb"
+
+#: wpc-fly-cart.php:363
+msgid "Left"
+msgstr "Bal"
+
+#: wpc-fly-cart.php:367
+msgid "Top"
+msgstr "Fent"
+
+#: wpc-fly-cart.php:371
+msgid "Bottom"
+msgstr "Lent"
+
+#: wpc-fly-cart.php:375
+msgid "Center"
+msgstr "Középen"
+
+#: wpc-fly-cart.php:381
+msgid "Effect"
+msgstr "Effekt"
+
+#: wpc-fly-cart.php:394
+msgid "Enable/disable slide effect."
+msgstr "Csúszó effekt engedélyezése/tiltása."
+
+#: wpc-fly-cart.php:399
+msgid "Style"
+msgstr "Stílus"
+
+#: wpc-fly-cart.php:404
+msgid "Color background"
+msgstr "Színes háttér"
+
+#: wpc-fly-cart.php:408
+msgid "White background"
+msgstr "Fehér háttér"
+
+#: wpc-fly-cart.php:412
+msgid "Color background, no thumbnail"
+msgstr "Színes háttér, index képek nélkül"
+
+#: wpc-fly-cart.php:416
+msgid "White background, no thumbnail"
+msgstr "Fehér háttér, index képek nélkül"
+
+#: wpc-fly-cart.php:420 wpc-fly-cart.php:437
+msgid "Background image"
+msgstr "Háttér kép"
+
+#: wpc-fly-cart.php:426
+msgid "Color"
+msgstr "Szín"
+
+#: wpc-fly-cart.php:432
+msgid "Background & text color, default %s"
+msgstr "Háttér és szöveg szín, alapértelmezett %s"
+
+#: wpc-fly-cart.php:453
+msgid "Close button"
+msgstr "Bezár gomb"
+
+#: wpc-fly-cart.php:465
+msgid "Show/hide the close button."
+msgstr "A bezáró gomb mutatása a mini bevásárlókosárban."
+
+#: wpc-fly-cart.php:469
+msgid "Link to individual product"
+msgstr "Egyedi termék kapcsolása"
+
+#: wpc-fly-cart.php:474
+msgid "Yes, open in the same tab"
+msgstr "Igen, azonos lapon történő nyitás"
+
+#: wpc-fly-cart.php:478
+msgid "Yes, open in the new tab"
+msgstr "Igen, új lapon történő nyitás"
+
+#: wpc-fly-cart.php:482
+msgid "Yes, open quick view popup"
+msgstr "Igen, felugró ablakban történő gyors megtekintés"
+
+#: wpc-fly-cart.php:494
+msgid "Item price"
+msgstr "Termék ára"
+
+#: wpc-fly-cart.php:503
+msgid "Price"
+msgstr "Ár"
+
+#: wpc-fly-cart.php:507 wpc-fly-cart.php:534 wpc-fly-cart.php:973
+#: wpc-fly-cart.php:978 wpc-fly-cart.php:1251
+msgid "Subtotal"
+msgstr "Összesen"
+
+#: wpc-fly-cart.php:511
+msgid "Show/hide the item price or subtotal under title."
+msgstr ""
+"Mutassa a termék árát vagy a végösszeget a termék címe alatt a listában."
+
+#: wpc-fly-cart.php:516
+msgid "Item data"
+msgstr "Tétel adatai"
+
+#: wpc-fly-cart.php:529
+msgid "Show/hide the item data under title."
+msgstr "Mutassa a termék adatokat a termék címe alatt a listában."
+
+#: wpc-fly-cart.php:549
+msgid "Coupon"
+msgstr "Kupon"
+
+#: wpc-fly-cart.php:565
+msgid "Shipping cost"
+msgstr "Szállítási költség"
+
+#: wpc-fly-cart.php:581
+msgid "Shipping calculator"
+msgstr "Szállítási kalkulátor"
+
+#: wpc-fly-cart.php:597
+msgid "Free shipping bar"
+msgstr "Ingyenes szállítás sáv"
+
+#: wpc-fly-cart.php:615 wpc-fly-cart.php:1009 wpc-fly-cart.php:1014
+#: wpc-fly-cart.php:1261
+msgid "Total"
+msgstr "Végösszeg"
+
+#: wpc-fly-cart.php:630
+msgid "Action buttons"
+msgstr "Akció gombok"
+
+#: wpc-fly-cart.php:635
+msgid "Cart & Checkout"
+msgstr "Kosár és fizetés"
+
+#: wpc-fly-cart.php:639
+msgid "Cart only"
+msgstr "Csak kosár"
+
+#: wpc-fly-cart.php:643
+msgid "Checkout only"
+msgstr "Csak fizetés"
+
+#: wpc-fly-cart.php:653
+msgid "Cross sells products"
+msgstr "Keresztértékesítésű termékek"
+
+#: wpc-fly-cart.php:669 wpc-fly-cart.php:955 wpc-fly-cart.php:960
+#: wpc-fly-cart.php:1239
+msgid "Empty cart"
+msgstr "Kosár ürítése"
+
+#: wpc-fly-cart.php:682
+msgid "Show/hide the empty cart button under the product list."
+msgstr "A \"kosár ürítése\" gomb megjelenítése/elrejtése a terméklista alatt."
+
+#: wpc-fly-cart.php:687 wpc-fly-cart.php:964 wpc-fly-cart.php:969
+#: wpc-fly-cart.php:1243
+msgid "Share cart"
+msgstr "Kosár megosztása"
+
+#: wpc-fly-cart.php:705 wpc-fly-cart.php:1035 wpc-fly-cart.php:1040
+#: wpc-fly-cart.php:1282
+msgid "Continue shopping"
+msgstr "Vásárlás folytatása"
+
+#: wpc-fly-cart.php:718
+msgid "Show/hide the continue shopping button at the end of fly cart."
+msgstr "Mutassa a vásárlás folytatása gombot a mini bevásárlókosár alján."
+
+#: wpc-fly-cart.php:723
+msgid "Continue shopping URL"
+msgstr "Vásárlás folyatatása URL"
+
+#: wpc-fly-cart.php:728
+msgid ""
+"Custom URL for \"continue shopping\" button. By default, only close the fly "
+"cart when clicking on this button."
+msgstr ""
+"A \"vásárlás folytatása\" gomb egyéni URL -je. Alapértelmezés szerint csak "
+"akkor zárja be a mini bevásárlókosarat, ha erre a gombra kattint."
+
+#: wpc-fly-cart.php:733 wpc-fly-cart.php:937
+msgid "Undo remove"
+msgstr "Visszavonás eltávolítása"
+
+#: wpc-fly-cart.php:746
+msgid "Enable/disable undo after removing a product."
+msgstr "Visszavonás engedélyezése a termék eltávolítása után."
+
+#: wpc-fly-cart.php:751
+msgid "Reload the cart"
+msgstr "Kosár újratöltése"
+
+#: wpc-fly-cart.php:764
+msgid ""
+"The cart will be reloaded when opening the page? If you use the cache for "
+"your site, please turn on this option."
+msgstr ""
+"A kosár újratöltődjön az oldal megnyitásakor? Ha webhelye gyorsítótárát "
+"használja, kapcsolja be ezt az opciót."
+
+#: wpc-fly-cart.php:769
+msgid "Hide on Cart & Checkout"
+msgstr "Elrejtés a kosár és fizetés oldalon"
+
+#: wpc-fly-cart.php:782
+msgid "Hide the fly cart on the Cart and Checkout page."
+msgstr "A kosár és fizetés oldalon ne jelenjen meg."
+
+#: wpc-fly-cart.php:787
+msgid "Bubble"
+msgstr "Buborék"
+
+#: wpc-fly-cart.php:788
+msgid "Settings for the bubble."
+msgstr "Beállítások a buborékhoz."
+
+#: wpc-fly-cart.php:791
+msgid "Enable"
+msgstr "Engedélyez"
+
+#: wpc-fly-cart.php:811
+msgid "Top Left"
+msgstr "Balra fent"
+
+#: wpc-fly-cart.php:815
+msgid "Top Right"
+msgstr "Jobbra fent"
+
+#: wpc-fly-cart.php:819
+msgid "Bottom Left"
+msgstr "Balra lent"
+
+#: wpc-fly-cart.php:823
+msgid "Bottom Right"
+msgstr "Jobbra lent"
+
+#: wpc-fly-cart.php:829
+msgid "Icon"
+msgstr "Ikon"
+
+#: wpc-fly-cart.php:847
+msgid "Hide if empty"
+msgstr "Legyen elrejtve, ha üres"
+
+#: wpc-fly-cart.php:860
+msgid "Hide the bubble if the cart is empty?"
+msgstr "Rejtsem el a buborékot, ha üres a kosár?"
+
+#: wpc-fly-cart.php:865 wpc-fly-cart.php:869
+msgid "Menu"
+msgstr "Menü"
+
+#: wpc-fly-cart.php:866
+msgid "Settings for cart menu item."
+msgstr "Beállítások a menüben lévő kosárhoz."
+
+#: wpc-fly-cart.php:884
+msgid "Choose the menu(s) you want to add the cart at the end."
+msgstr "Válaszd ki azt a menüt, aminek a végéhez szeretnéd adni a kosarat."
+
+#: wpc-fly-cart.php:891 wpc-fly-cart.php:1055
+msgid "Update Options"
+msgstr "Beállítások mentése"
+
+#: wpc-fly-cart.php:906
+msgid ""
+"Leave blank to use the default text and its equivalent translation in "
+"multiple languages."
+msgstr ""
+"Hagyd üresen az alapértelmezett szöveg/fordítás több nyelven történő "
+"használatához."
+
+#: wpc-fly-cart.php:910
+msgid "Cart heading"
+msgstr "Kosár címsor"
+
+#: wpc-fly-cart.php:915 wpc-fly-cart.php:1129
+msgid "Shopping cart"
+msgstr "Bevásárlókosár"
+
+#: wpc-fly-cart.php:919 wpc-fly-cart.php:924 wpc-fly-cart.php:1132
+msgid "Close"
+msgstr "Bezár"
+
+#: wpc-fly-cart.php:928 wpc-fly-cart.php:933 wpc-fly-cart.php:1218
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: wpc-fly-cart.php:946
+msgid "Removed"
+msgstr "%s eltávolítva"
+
+#: wpc-fly-cart.php:982 wpc-fly-cart.php:987
+msgid "Coupon code"
+msgstr "Kuponkód"
+
+#: wpc-fly-cart.php:991
+msgid "Coupon apply"
+msgstr "Kupon érvényesítése"
+
+#: wpc-fly-cart.php:996
+msgid "Apply"
+msgstr "Alkalmaz"
+
+#: wpc-fly-cart.php:1000 wpc-fly-cart.php:1005
+msgid "Shipping"
+msgstr "Szállítás"
+
+#: wpc-fly-cart.php:1018 wpc-fly-cart.php:1022 wpc-fly-cart.php:1267
+#: wpc-fly-cart.php:1271
+msgid "Cart"
+msgstr "Kosár"
+
+#: wpc-fly-cart.php:1026 wpc-fly-cart.php:1031 wpc-fly-cart.php:1267
+#: wpc-fly-cart.php:1276
+msgid "Checkout"
+msgstr "Fizetés"
+
+#: wpc-fly-cart.php:1044
+msgid "Cross sells"
+msgstr "Keresztértékesítés"
+
+#: wpc-fly-cart.php:1049
+msgid "You may be interested in&hellip;"
+msgstr "Érdekelhet a&hellip;"
+
+#: wpc-fly-cart.php:1224
+msgid "There are no products in the cart!"
+msgstr "Nincs termék a kosaradban!"

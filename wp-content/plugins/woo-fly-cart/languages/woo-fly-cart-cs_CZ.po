@@ -1,0 +1,523 @@
+# Copyright (C) 2020 WPClever.net
+# This file is distributed under the same license as the WPC Fly Cart for WooCommerce plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WPC Fly Cart for WooCommerce 2.0.5\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woo-fly-cart\n"
+"Last-Translator: Jan Baďura\n"
+"Language-Team: Čeština\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-04-15T17:20:53+00:00\n"
+"PO-Revision-Date: 2021-08-28 10:33+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: woofc\n"
+"Language: cs-CZ\n"
+"Plural-Forms: nplurals=3; plural=( n == 1 ) ? 0 : ( n >= 2 && n <= 4 ) ? 1 : "
+"2;\n"
+"X-Loco-Version: 2.3.3; wp-5.4"
+
+#: wpc-fly-cart.php:143
+msgid "%s was removed."
+msgstr "%s byl odebrán."
+
+#: wpc-fly-cart.php:612
+msgid "Action buttons"
+msgstr "Funkční tlačítka"
+
+#: wpc-fly-cart.php:952
+msgid "Apply"
+msgstr "Použít"
+
+#: wpc-fly-cart.php:432
+msgid "Background & text color, default %s"
+msgstr "Barevné pozadí a textu, výchozí %s"
+
+#: wpc-fly-cart.php:420 wpc-fly-cart.php:437
+msgid "Background image"
+msgstr "Obrázek na pozadí"
+
+#: wpc-fly-cart.php:371
+msgid "Bottom"
+msgstr "Dole"
+
+#: wpc-fly-cart.php:801
+msgid "Bottom Left"
+msgstr "Vlevo dole"
+
+#: wpc-fly-cart.php:805
+msgid "Bottom Right"
+msgstr "Vpravo dole"
+
+#: wpc-fly-cart.php:769
+msgid "Bubble"
+msgstr "Bublina"
+
+#: wpc-fly-cart.php:296
+msgid "button class or id"
+msgstr "CSS Class nebo ID tlačítka"
+
+#: wpc-fly-cart.php:972 wpc-fly-cart.php:976 wpc-fly-cart.php:1206 
+#: wpc-fly-cart.php:1210
+msgid "Cart"
+msgstr "Košík"
+
+#: wpc-fly-cart.php:617
+msgid "Cart & Checkout"
+msgstr "Košík a pokladna"
+
+#: wpc-fly-cart.php:892
+msgid "Cart heading"
+msgstr "Nadpis košíku"
+
+#: wpc-fly-cart.php:621
+msgid "Cart only"
+msgstr "Pouze košík"
+
+#: wpc-fly-cart.php:375
+msgid "Center"
+msgstr "Střed"
+
+#: wpc-fly-cart.php:220
+msgid "Changelog"
+msgstr "Seznam změn"
+
+#: wpc-fly-cart.php:980 wpc-fly-cart.php:984 wpc-fly-cart.php:1206 
+#: wpc-fly-cart.php:1215
+msgid "Checkout"
+msgstr "Pokladna"
+
+#: wpc-fly-cart.php:625
+msgid "Checkout only"
+msgstr "Pouze pokladna"
+
+#: wpc-fly-cart.php:866
+msgid "Choose the menu(s) you want to add the cart at the end."
+msgstr "Vyberte Menu pro umístění košíku."
+
+#: wpc-fly-cart.php:900 wpc-fly-cart.php:904 wpc-fly-cart.php:1075
+msgid "Close"
+msgstr "Zavřít"
+
+#: wpc-fly-cart.php:453
+msgid "Close button"
+msgstr "Tlačítko zavřít"
+
+#: wpc-fly-cart.php:426
+msgid "Color"
+msgstr "Barva"
+
+#: wpc-fly-cart.php:404
+msgid "Color background"
+msgstr "Barevné pozadí"
+
+#: wpc-fly-cart.php:412
+msgid "Color background, no thumbnail"
+msgstr "Barevné pozadí, bez obrázku produktu"
+
+#: wpc-fly-cart.php:687 wpc-fly-cart.php:988 wpc-fly-cart.php:992 
+#: wpc-fly-cart.php:1221
+msgid "Continue shopping"
+msgstr "Pokračovat v nákupu"
+
+#: wpc-fly-cart.php:705
+msgid "Continue shopping URL"
+msgstr "Odkaz pro pokračování v nákupu"
+
+#: wpc-fly-cart.php:549
+msgid "Coupon"
+msgstr "Kupón"
+
+#: wpc-fly-cart.php:948
+msgid "Coupon apply"
+msgstr "Použít kupón"
+
+#: wpc-fly-cart.php:940 wpc-fly-cart.php:944
+msgid "Coupon code"
+msgstr "Kód kupónu"
+
+#: wpc-fly-cart.php:635
+msgid "Cross sells products"
+msgstr "Cross sells produktů"
+
+#: wpc-fly-cart.php:710
+msgid ""
+"Custom URL for \"continue shopping\" button. By default, only close the fly "
+"cart when clicking on this button."
+msgstr ""
+"Vlastní odkaz pro tlačítko \"Pokračovat v nákupu\". Ve výchozím nastavení se "
+"po kliknutí na tlačítko Fly Cart zavře."
+
+#: wpc-fly-cart.php:222
+msgid "Discussion"
+msgstr "Diskuse"
+
+#: wpc-fly-cart.php:381
+msgid "Effect"
+msgstr "Efekt"
+
+#: wpc-fly-cart.php:651 wpc-fly-cart.php:916 wpc-fly-cart.php:920 
+#: wpc-fly-cart.php:1182
+msgid "Empty cart"
+msgstr "Prázdný košík"
+
+#: wpc-fly-cart.php:773
+msgid "Enable"
+msgstr "Povolit"
+
+#: wpc-fly-cart.php:394
+msgid "Enable/disable slide effect."
+msgstr "Povolit/zakázat posuvný efekt."
+
+#: wpc-fly-cart.php:728
+#| msgid "Enable undo after removing a product?"
+msgid "Enable/disable undo after removing a product."
+msgstr "Povolit vrácení odebraného produktu?"
+
+#: wpc-fly-cart.php:242
+msgid "Essential Kit"
+msgstr "Essential Kit"
+
+#: wpc-fly-cart.php:201
+msgid "Fly Cart"
+msgstr "Fly Cart"
+
+#: wpc-fly-cart.php:252
+msgid "General"
+msgstr "Hlavní"
+
+#: wpc-fly-cart.php:253
+msgid "General settings for the fly cart."
+msgstr "Hlavní nastavení Fly Cart"
+
+#: wpc-fly-cart.php:327 wpc-fly-cart.php:462 wpc-fly-cart.php:499 
+#: wpc-fly-cart.php:525 wpc-fly-cart.php:543 wpc-fly-cart.php:558 
+#: wpc-fly-cart.php:574 wpc-fly-cart.php:590 wpc-fly-cart.php:606 
+#: wpc-fly-cart.php:629 wpc-fly-cart.php:644 wpc-fly-cart.php:660 
+#: wpc-fly-cart.php:678 wpc-fly-cart.php:696
+msgid "Hide"
+msgstr "Skrýt"
+
+#: wpc-fly-cart.php:829
+msgid "Hide if empty"
+msgstr "Skrýt, když je prázdné"
+
+#: wpc-fly-cart.php:751
+msgid "Hide on Cart & Checkout"
+msgstr "Skrýt v košíku a pokladně"
+
+#: wpc-fly-cart.php:842
+msgid "Hide the bubble if the cart is empty?"
+msgstr "Skrýt bublinku, když je košík prázdný?"
+
+#: wpc-fly-cart.php:764
+msgid "Hide the fly cart on the Cart and Checkout page."
+msgstr "Skrýt Fly Cart v košíku a pokladně"
+
+#. Author URI of the plugin
+msgid "https://wpclever.net"
+msgstr "https://wpclever.net"
+
+#. Plugin URI of the plugin
+msgid "https://wpclever.net/"
+msgstr "https://wpclever.net/"
+
+#: wpc-fly-cart.php:811
+msgid "Icon"
+msgstr "Ikona"
+
+#: wpc-fly-cart.php:331
+msgid ""
+"If you hide the overlay layer, the buyer still can work on your site when "
+"the fly cart is opening."
+msgstr ""
+"Pokud zvolíte \"Skrýt\" překrytí, zákazník může pokračovat v nákupu i přes "
+"otevřený nákupní seznam ve Fly Cart."
+
+#: wpc-fly-cart.php:516
+msgid "Item data"
+msgstr "Údaje o položkách"
+
+#: wpc-fly-cart.php:494
+msgid "Item price"
+msgstr "Cena položky"
+
+#: wpc-fly-cart.php:888
+msgid ""
+"Leave blank to use the default text and its equivalent translation in "
+"multiple languages."
+msgstr ""
+"Pro použití výchozího textu a jeho ekvivalentního překladu do více jazyků "
+"ponechte pole prázdné."
+
+#: wpc-fly-cart.php:363
+msgid "Left"
+msgstr "Vlevo"
+
+#: wpc-fly-cart.php:469
+msgid "Link to individual product"
+msgstr "Odkaz na produkt"
+
+#: wpc-fly-cart.php:233 wpc-fly-cart.php:886
+msgid "Localization"
+msgstr "Lokalizace"
+
+#: wpc-fly-cart.php:292
+msgid "Manual show up button"
+msgstr "Tlačítko pro ruční vzhled"
+
+#: wpc-fly-cart.php:847 wpc-fly-cart.php:851
+msgid "Menu"
+msgstr "Nabídka"
+
+#: wpc-fly-cart.php:265 wpc-fly-cart.php:283 wpc-fly-cart.php:312 
+#: wpc-fly-cart.php:345 wpc-fly-cart.php:390 wpc-fly-cart.php:486 
+#: wpc-fly-cart.php:724 wpc-fly-cart.php:742 wpc-fly-cart.php:760 
+#: wpc-fly-cart.php:782 wpc-fly-cart.php:838
+msgid "No"
+msgstr "Ne"
+
+#: wpc-fly-cart.php:256
+msgid "Open on AJAX add to cart"
+msgstr "Použít AJAX pro přidat do košíku"
+
+#: wpc-fly-cart.php:274
+msgid "Open on normal add to cart"
+msgstr "Použít \"standardní\" přidat do košíku"
+
+#: wpc-fly-cart.php:318
+msgid "Overlay layer"
+msgstr "Překrytí (Overlay layer)"
+
+#: wpc-fly-cart.php:354 wpc-fly-cart.php:788
+msgid "Position"
+msgstr "Pozice"
+
+#: wpc-fly-cart.php:175 wpc-fly-cart.php:238
+msgid "Premium Version"
+msgstr "Prémiová verze"
+
+#: wpc-fly-cart.php:503
+msgid "Price"
+msgstr "Cena"
+
+#: wpc-fly-cart.php:349
+msgid "Read more about %s"
+msgstr "Přečtěte si více o %s"
+
+#: wpc-fly-cart.php:733
+msgid "Reload the cart"
+msgstr "Znovu načíst košík"
+
+#: wpc-fly-cart.php:908 wpc-fly-cart.php:912 wpc-fly-cart.php:1161
+msgid "Remove"
+msgstr "Odebrat"
+
+#: wpc-fly-cart.php:303
+msgid "Reverse items"
+msgstr "Opačné řazení položek"
+
+#: wpc-fly-cart.php:218
+msgid "Reviews"
+msgstr "Hodnocení"
+
+#: wpc-fly-cart.php:359
+msgid "Right"
+msgstr "Vpravo"
+
+#: wpc-fly-cart.php:174 wpc-fly-cart.php:229
+msgid "Settings"
+msgstr "Nastavení"
+
+#: wpc-fly-cart.php:848
+msgid "Settings for cart menu item."
+msgstr "Nastavení položek v košíku."
+
+#: wpc-fly-cart.php:770
+msgid "Settings for the bubble."
+msgstr "Nastavení bubliny"
+
+#: wpc-fly-cart.php:669 wpc-fly-cart.php:924 wpc-fly-cart.php:928 
+#: wpc-fly-cart.php:1186
+msgid "Share cart"
+msgstr "Sdílet košík"
+
+#: wpc-fly-cart.php:956 wpc-fly-cart.php:960
+msgid "Shipping"
+msgstr "Doprava"
+
+#: wpc-fly-cart.php:581
+msgid "Shipping calculator"
+msgstr "Kalkulace dopravy"
+
+#: wpc-fly-cart.php:565
+msgid "Shipping cost"
+msgstr "Náklady na dopravu"
+
+#: wpc-fly-cart.php:896 wpc-fly-cart.php:1072
+#| msgid "Shopping Cart"
+msgid "Shopping cart"
+msgstr "Nákupní košík"
+
+#: wpc-fly-cart.php:323 wpc-fly-cart.php:458 wpc-fly-cart.php:521 
+#: wpc-fly-cart.php:539 wpc-fly-cart.php:554 wpc-fly-cart.php:570 
+#: wpc-fly-cart.php:586 wpc-fly-cart.php:602 wpc-fly-cart.php:640 
+#: wpc-fly-cart.php:656 wpc-fly-cart.php:674 wpc-fly-cart.php:692
+msgid "Show"
+msgstr "Zobrazit"
+
+#: wpc-fly-cart.php:465
+msgid "Show/hide the close button."
+msgstr "Zobrazit/skrýt tlačítko pro zavření košíku."
+
+#: wpc-fly-cart.php:700
+#| msgid "Show the continue shopping button at the end of fly cart?"
+msgid "Show/hide the continue shopping button at the end of fly cart."
+msgstr "Zobrazit tlačítko pro pokračování v nákupu na konci nákupního seznamu?"
+
+#: wpc-fly-cart.php:664
+msgid "Show/hide the empty cart button under the product list."
+msgstr "Zobrazit/skrýt tlačítko prázdného košíku pod seznamem produktů."
+
+#: wpc-fly-cart.php:529
+msgid "Show/hide the item data under title."
+msgstr "Zobrazit/skrýt údaje o položce pod názvem."
+
+#: wpc-fly-cart.php:511
+msgid "Show/hide the item price or subtotal under title."
+msgstr "Zobrazit/skrýt cenu položky nebo mezisoučet pod názvem."
+
+#: wpc-fly-cart.php:399
+msgid "Style"
+msgstr "Vzhled"
+
+#: wpc-fly-cart.php:507 wpc-fly-cart.php:534 wpc-fly-cart.php:932 
+#: wpc-fly-cart.php:936 wpc-fly-cart.php:1194
+msgid "Subtotal"
+msgstr "Mezisoučet"
+
+#: wpc-fly-cart.php:191
+msgid "Support"
+msgstr "Podpora"
+
+#: wpc-fly-cart.php:215
+msgid ""
+"Thank you for using our plugin! If you are satisfied, please reward it a "
+"full five-star %s rating."
+msgstr ""
+"Děkujeme za používaní našeho pluginu! Pokud jste s ním spokojení, prosím o "
+"hodnocení 5 hvězdičkami %s."
+
+#: wpc-fly-cart.php:746
+msgid ""
+"The cart will be reloaded when opening the page? If you use the cache for "
+"your site, please turn on this option."
+msgstr ""
+"Znovu načítat košík při otevření stránky? Pokud pro na webu používáte cache, "
+"zapněte tuto možnost."
+
+#: wpc-fly-cart.php:298
+msgid ""
+"The class or id of the button, when click to this button the fly cart will "
+"be show up. Example %s or %s"
+msgstr ""
+"CSS class nebo ID tlačítka, po kliknutí na tlačítko se zobrazí Fly Cart. "
+"Ukázka %s nebo %s"
+
+#: wpc-fly-cart.php:269
+msgid ""
+"The fly cart will be opened immediately after whenever click to AJAX Add to "
+"cart buttons? See %s \"Add to cart behaviour\" setting %s"
+msgstr ""
+"Otevřít Fly cart po kliknutí na tlačítko AJAX pro přidání do košíku? "
+"Zobrazit nastavení %s \"Chování přidávání do košíku\" ve WooCommerce %s"
+
+#: wpc-fly-cart.php:287
+msgid ""
+"The fly cart will be opened immediately after whenever click to normal Add "
+"to cart buttons (AJAX is not enable) or Add to cart button in single product "
+"page?"
+msgstr ""
+"Otevřít Fly cart po každém kliknutí na tlačítko Přidat do košíku (AJAX není "
+"povolen) nebo tlačítka Přidat do košíku na stránce Produktu?"
+
+#: wpc-fly-cart.php:1167
+msgid "There are no products in the cart!"
+msgstr "Košík je prázdný!"
+
+#: wpc-fly-cart.php:367
+msgid "Top"
+msgstr "Nahoře"
+
+#: wpc-fly-cart.php:793
+msgid "Top Left"
+msgstr "Vlevo nahoře"
+
+#: wpc-fly-cart.php:797
+msgid "Top Right"
+msgstr "Vpravo nahoře"
+
+#: wpc-fly-cart.php:597 wpc-fly-cart.php:964 wpc-fly-cart.php:968 
+#: wpc-fly-cart.php:1200
+msgid "Total"
+msgstr "Celkem"
+
+#: wpc-fly-cart.php:715
+msgid "Undo remove"
+msgstr "Obnovit odebrané"
+
+#: wpc-fly-cart.php:142
+msgid "Undo?"
+msgstr "Vrátit?"
+
+#: wpc-fly-cart.php:873 wpc-fly-cart.php:998
+msgid "Update Options"
+msgstr "Aktualizovat nastavení"
+
+#: wpc-fly-cart.php:336
+msgid "Use perfect-scrollbar"
+msgstr "Použít perfect-scrollbar"
+
+#: wpc-fly-cart.php:408
+msgid "White background"
+msgstr "Bílé pozadí včetně obrázku produktu"
+
+#: wpc-fly-cart.php:416
+msgid "White background, no thumbnail"
+msgstr "Bílé pozadí, bez obrázku produktu"
+
+#. Description of the plugin
+msgid "WooCommerce interaction mini cart with many styles and effects."
+msgstr "WooCommerce interaktivní mini košík s mnoha styly a efekty."
+
+#: wpc-fly-cart.php:201 wpc-fly-cart.php:212
+msgid "WPC Fly Cart"
+msgstr "WPC Fly Cart"
+
+#. Plugin Name of the plugin
+msgid "WPC Fly Cart for WooCommerce"
+msgstr "WPC Fly Cart pro WooCommerce"
+
+#. Author of the plugin
+msgid "WPClever"
+msgstr "WPClever"
+
+#: wpc-fly-cart.php:261 wpc-fly-cart.php:279 wpc-fly-cart.php:308 
+#: wpc-fly-cart.php:341 wpc-fly-cart.php:386 wpc-fly-cart.php:720 
+#: wpc-fly-cart.php:738 wpc-fly-cart.php:756 wpc-fly-cart.php:778 
+#: wpc-fly-cart.php:834
+msgid "Yes"
+msgstr "Ano"
+
+#: wpc-fly-cart.php:478
+msgid "Yes, open in the new tab"
+msgstr "Ano, otevřít odkaz na novém panelu"
+
+#: wpc-fly-cart.php:474
+msgid "Yes, open in the same tab"
+msgstr "Ano, otevřít odkaz ve stejném panelu"
+
+#: wpc-fly-cart.php:482
+msgid "Yes, open quick view popup"
+msgstr "Ano, otevřít okno rychlého náhledu"

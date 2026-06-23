@@ -351,3 +351,21 @@ Updated: 2025-12-10 07:04:17
     list-style: none;
     padding: 0;
 }
+
+/* ─── Checkboxes de slots por comanda ───────────────────────────────────────── */
+
+.bc-slot-check-web { accent-color: #e67e22 !important; cursor: not-allowed !important; }
+.bc-slot-order-group { display: inline-flex; align-items: center; gap: 2px; margin-right: 3px; }
+.bc-order-link {
+    font-size: .62rem;
+    font-weight: 700;
+    color: #e67e22;
+    text-decoration: none;
+    border: 1px solid #e67e22;
+    border-radius: 3px;
+    padding: 0 3px;
+    line-height: 1.5;
+    white-space: nowrap;
+    margin-left: 2px;
+}
+.bc-order-link:hover { background: #e67e22; color: #fff !important; }
